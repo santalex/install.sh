@@ -458,6 +458,7 @@ initiate_and_start_mongo(){
 }
 
 install_rocketchat(){
+    yum install -y tar
     curl -L $ROCKETCHAT_DOWNLOAD_URL -o /tmp/rocket.chat.tgz
     tar -xzf /tmp/rocket.chat.tgz -C /tmp
     cd /tmp/bundle/programs/server && npm install
